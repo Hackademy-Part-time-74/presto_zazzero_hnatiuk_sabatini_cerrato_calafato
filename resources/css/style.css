@@ -1,0 +1,19 @@
+/*
+Elemento    Colore    Codice HEX
+Sfondo Principale    Bianco Ottico (Optic White)    #F7FBF5
+Testi e Loghi    Nero Soft    #060606
+Accento Primario    Teal/Verde Acqua (Loden)    #62B4A5
+Accento Caldo    Tramonto (Coral/Orange)    #FF7F50
+Sfondo Sezioni    Beige Sabbia (Oyster)    #D8D0BC
+*/
+
+
+:root {
+    
+    /* Palette generale */
+    --primary-color:#F7FBF5;
+    --secondary-color:#060606;
+    --success-color:#62B4A5;
+    --danger-color:#FF7F50;
+    --info-color:#D8D0BC;
+}
