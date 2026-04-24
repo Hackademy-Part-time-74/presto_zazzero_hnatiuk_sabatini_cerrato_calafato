@@ -10,9 +10,9 @@ Sfondo Sezioni    Beige Sabbia (Oyster)    #D8D0BC
 :root {
 
     /* Palette generale */
-    --primary-color:#F7FBF5;
-    --secondary-color:#060606;
-    --success-color:#62B4A5;
-    --danger-color:#FF7F50;
-    --info-color:#D8D0BC;
+    --primary-color:#F7FBF5 !important;
+    --secondary-color:#060606 !important;
+    --success-color:#62B4A5 !important;
+    --danger-color:#FF7F50 !important;
+    --info-color:#D8D0BC !important;
 }
