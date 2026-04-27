@@ -9,5 +9,20 @@
             <li><a href="#" class="nav-link px-2">FAQs</a></li>
             <li><a href="#" class="nav-link px-2">About</a></li>
         </ul>
-        <div class="col-md-3 text-end"> <button type="button" class="btn btn-outline-primary me-2">Login</button> <button type="button" class="btn btn-primary">Registrati</button> </div>
+       @auth  
+       <p>Ciao, {{ auth()->user()->name }}</p>
+       <form action="{{ route('logout')}}" method="POST" id="form-logout">
+       @csrf 
+       <button type="submit" class="btn btn-sm btn-danger">Esci</button>
+       </form>
+       @else   
+        <div class="col-md-3 text-end"> 
+           <button  type="button" class="btn btn-outline-primary me-2">
+            <a href="{{ route('login')}}"> Login</a>
+        </button>
+           <button type="button" class="btn btn-primary">
+            <a href="{{ route('register')}}"> Registrati</a>
+        </button> 
+        </div>
+        @endauth
 </header>

@@ -18,7 +18,7 @@
                         <label for="floatingPassword">Password</label> 
                     </div>
                     <div class="form-floating mb-3"> 
-                        <input type="password" class="form-control" id="floatingPasswordConfirmation" name="passwordConfirmation" placeholder="Password Confirmation"> 
+                        <input type="password" class="form-control" id="floatingPasswordConfirmation" name="password_confirmation" placeholder="Password Confirmation"> 
                         <label for="floatingPassword">Password Confirmation</label> 
                     </div>
                     <button class="btn btn-primary w-25 py-2 mb-3" type="submit">Registrati</button>
