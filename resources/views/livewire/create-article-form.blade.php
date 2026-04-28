@@ -1,9 +1,5 @@
 <form class="shadow-lg p-5 rounded border border-2 border-warning" wire:submit="store">
-    @if (session()->has('success'))
-    <div class="alert alert-success text-center">
-        {{ session('success') }}
-    </div>
-    @endif
+    
     <div class="mb-3">
         <label for="title" class="form-label">Titolo:</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.blur="title">
@@ -29,8 +25,9 @@
     </div>
 
     <div class="mb-3">
+        <label for="category" class="mb-3">Categorie:</label>
         <select id="category" wire:model="category" class="form-control @error('category') is-invalid @enderror">
-            <option label disabled>Seleziona una categoria</option>
+            <option selected>Seleziona una categoria</option>
             @foreach ($categories as $category)
             <option value="{{ $category->id }}">{{ $category->name }}</option>
             @endforeach
@@ -43,5 +40,9 @@
     <div class="d-flex justify-content-center">
         <button type="submit" class="btn btn-warning w-25 py-2 mb-3 fw-semibold mt-3">Crea</button>
     </div>
-
+    @if (session()->has('success'))
+        <div class="alert alert-success text-center">
+            {{ session('success') }}
+        </div>
+    @endif
 </form>

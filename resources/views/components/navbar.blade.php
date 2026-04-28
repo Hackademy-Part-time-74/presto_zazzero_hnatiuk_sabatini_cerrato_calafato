@@ -7,34 +7,52 @@
             </a> 
         </div>
 
+        {{-- propongo di usare il colore verde per i link in modo da differenziare link cliccabili con semplici testi esempio al link Articoli riga 17 --}}
         <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
             <li><a href="/" class="nav-link px-2 link-dark">Home</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
+
+            <!-- <li><a href="#" class="nav-link px-2 link-dark">Features</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">Pricing</a></li>
             <li><a href="#" class="nav-link px-2 link-dark">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">About</a></li> -->
+
+            <li><a href="{{ route ('article.index') }}" class="nav-link px-2 text-success">Articoli</a></li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle text-black" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+                <ul class="dropdown-menu">
+                    @foreach ($categories as $category)
+                        <li>
+                            <a href="#" class="text black dropdown-item text-capitalize">{{ $category->name }}</a>
+                        </li>
+                        @if (!$loop->last)
+                            <hr class="dropdown-divider">
+                        @endif
+                    @endforech
+                </ul>
+            </li>
+
         </ul>
 
         @auth  
-        <p class="mb-0 fs-5">Ciao {{ auth()->user()->name }} <i class="bi bi-person-fill"></i></p>
+            <p class="mb-0 fs-5">Ciao {{ auth()->user()->name }} <i class="bi bi-person-fill"></i></p>
 
     
-        <button class="btn btn-outline-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo <i class="bi bi-journal-plus"></i></a></button>
+            <button class="btn btn-outline-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo <i class="bi bi-journal-plus"></i></a></button>
 
-        <form action="{{ route('logout')}}" method="POST" id="form-logout">
-        @csrf 
+            <form action="{{ route('logout')}}" method="POST" id="form-logout">
+            @csrf 
             <button type="submit" class="btn btn-outline-warning border border-3 border-warning text-black">Esci <i class="bi bi-door-open"></i></button>
-        </form>
+            </form>
         @else   
-        <div class="col-md-3 text-end">
+            <div class="col-md-3 text-end">
 
-            <button  type="button" class="btn btn-sm btn-outline-warning border border-3 border-warning me-2">
-                <a href="{{ route('login')}}" class="text-black"> Login <i class="bi bi-box-arrow-in-right"></i></a>
-            </button>
+                <button  type="button" class="btn btn-sm btn-outline-warning border border-3 border-warning me-2">
+                    <a href="{{ route('login')}}" class="text-black"> Login <i class="bi bi-box-arrow-in-right"></i></a>
+                </button>
 
-            <button type="button" class="btn btn-sm btn-outline-warning border border-3 border-warning">
-                <a href="{{ route('register')}}" class="text-black">Registrati <i class="bi bi-person-fill-add"></i></a>
-            </button> 
-        </div>
-    @endauth
+                <button type="button" class="btn btn-sm btn-outline-warning border border-3 border-warning">
+                    <a href="{{ route('register')}}" class="text-black">Registrati <i class="bi bi-person-fill-add"></i></a>
+                </button> 
+            </div>
+        @endauth
 </nav>
