@@ -7,13 +7,13 @@
                 </h1>
             </div>
         </div>
+
         <div class="row height-custom py-5 justify-content-center align-items-center">
-            @forelse($articles as $article)
+            @forelse ($articles as $article)
 
                 <div class="col-12 col-md-3">
-
                     <x-card :article= "$article"/>
-
+                    <p>Sono l'articolo</p>
                 </div>
             @empty
                 <div class="col-12 text-center">
