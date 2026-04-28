@@ -30,6 +30,8 @@ class ArticleController extends Controller implements HasMiddleware
     
     public function byCategory(Category $category)
     {
+        
+
         return view('article.byCategory',[
             'articles' => $category->articles,
             'category' => $category,

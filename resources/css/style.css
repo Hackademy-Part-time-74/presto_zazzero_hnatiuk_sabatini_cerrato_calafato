@@ -47,3 +47,8 @@ a {
     font-family: "Sora", serif;
 }
 
+
+.text-warning {
+
+    color: var(--warning-color) !important;
+}
