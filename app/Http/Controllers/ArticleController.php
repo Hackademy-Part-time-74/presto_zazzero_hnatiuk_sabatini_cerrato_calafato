@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Article;
 use Illuminate\Routing\Controllers\HasMiddleware;
@@ -27,7 +28,7 @@ class ArticleController extends Controller implements HasMiddleware
         return view('article.show',compact('article'));
     }
     
-    public function byCategory()
+    public function byCategory(Category $category)
     {
         return view('article.byCategory',[
             'articles' => $category->articles,
