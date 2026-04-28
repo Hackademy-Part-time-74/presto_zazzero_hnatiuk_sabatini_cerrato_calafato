@@ -1,4 +1,4 @@
-<form class="bg-body-tertiary shadow rounded p-5 my-5" wire:submit="store">
+<form class="shadow-lg p-5 rounded border border-2 border-warning" wire:submit="store">
     @if (session()->has('success'))
     <div class="alert alert-success text-center">
         {{ session('success') }}
@@ -41,7 +41,7 @@
     </div>
 
     <div class="d-flex justify-content-center">
-        <button type="submit" class="btn btn-primary">Crea</button>
+        <button type="submit" class="btn btn-warning w-25 py-2 mb-3 fw-semibold mt-3">Crea</button>
     </div>
 
 </form>

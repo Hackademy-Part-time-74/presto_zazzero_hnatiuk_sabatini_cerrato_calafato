@@ -1,18 +1,48 @@
+@import "bootstrap";
+
+/* Modifiche generali per il sito */
+*{
+    font-family: "Sora", serif;
+}
+
+
 /*
-Elemento    Colore    Codice HEX
 Sfondo Principale    Bianco Ottico (Optic White)    #F7FBF5
 Testi e Loghi    Nero Soft    #060606
 Accento Primario    Teal/Verde Acqua (Loden)    #62B4A5
 Accento Caldo    Tramonto (Coral/Orange)    #FF7F50
 Sfondo Sezioni    Beige Sabbia (Oyster)    #D8D0BC
 */
-
 :root {
 
-    /* Palette generale */
-    --primary-color:#F7FBF5 !important;
-    --secondary-color:#060606 !important;
-    --success-color:#62B4A5 !important;
-    --danger-color:#FF7F50 !important;
-    --info-color:#D8D0BC !important;
+/* Palette generale */
+    --primary-color:#F7FBF5;
+    --secondary-color:#060606;
+    --danger-color:#F15d56;
+    --info-color:#f8f5f3;
+    --warning-color:#fd9603;
+}
+
+/* Colore per Navbar */
+.bg-info {
+
+    background-color: var(--info-color) !important;
+}
+
+/* Colore per bottoni Login-Registrati */
+.btn-warning {
+
+    background-color: var(--warning-color) !important;
+}
+
+/* Colore bordo personalizzato per i bottoni */
+.border-warning {
+
+    border-color: var(--warning-color) !important;
+}
+
+/* Toglie underline dei link */
+a {
+    text-decoration: none;
+    font-family: "Sora", serif;
 }
