@@ -24,4 +24,9 @@ class Article extends Model
         'category_id',
         'user_id',
     ];
+    public function setAccepted($value){
+        $this->is_accepted=$value;
+        $this->save();
+        return true;
+    }
 }

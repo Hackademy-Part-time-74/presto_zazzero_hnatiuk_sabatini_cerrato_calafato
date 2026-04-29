@@ -9,10 +9,10 @@
 
     
     <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
-        <li><a href="/" class="nav-link px-2 link-dark hover-link">Home</a></li>
-        <li><a href="{{ route ('article.index') }}" class="nav-link text-black">Articoli</a></li>
+        <li><a href="/" class="hover-grow nav-link px-2 link-dark hover-link">Home</a></li>
+        <li><a href="{{ route ('article.index') }}" class="hover-grow nav-link text-black">Articoli</a></li>
         <li class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle text-black" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+            <a href="#" class="hover-grow nav-link dropdown-toggle text-black" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
             <ul class="dropdown-menu">
                 @foreach ($categories as $category)
                 <li>
@@ -29,11 +29,16 @@
     </ul>
 
     @auth
-    <button class="btn btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
+    @if(auth()->user()->is_revisor)
+    <li class="nav-item">
+        <a href="{{ route('revisor.index') }} " class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25">Zona revisore</a>
+    </li>
+    @endif
+    <button class="hover-grow btn btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
 
     <div class="d-flex p-2 justify-content-center">        
         <ul class="nav-item dropdown">
-            <a href="#" class="nav-link dropdown-toggle mt-3 text-black" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a href="#" class="hover-grow nav-link dropdown-toggle mt-3 text-black" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Ciao {{ auth()->user()->name }} <i class="bi bi-person-fill"> </i></a>
             <li class="dropdown-menu">
                 <ul>
@@ -49,11 +54,11 @@
     @else
     <div class="col-md-3 text-end">
 
-        <button type="button" class="btn btn-sm btn-outline-warning border border-3 border-warning px-4 me-3">
+        <button type="button" class="hover-grow btn btn-sm btn-outline-warning border border-3 border-warning px-4 me-3">
             <a href="{{ route('login')}}" class="text-black"> Login <i class="bi bi-box-arrow-in-right"></i></a>
         </button>
 
-        <button type="button" class="btn btn-sm btn-outline-warning border border-3 border-warning">
+        <button type="button" class="hover-grow btn btn-sm btn-outline-warning border border-3 border-warning">
             <a href="{{ route('register')}}" class="text-black">Registrati <i class="bi bi-person-fill-add"></i></a>
         </button>
     </div>
