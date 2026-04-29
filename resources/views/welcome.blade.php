@@ -1,7 +1,11 @@
 <x-layout>
 
     <h1 class="text-center">HOME PAGE</h1>
-
+    @if(session()->has('errorMessage'))
+    <div class="alert alert-danger text-center shadow rounded w-50">
+        {{ session('errorMessage') }}
+    </div>
+    @endif
     <div class="container">
         <div class="row height-custom justify-content-center align-items-center p-4 g-4">
             @forelse ($articles as $article)

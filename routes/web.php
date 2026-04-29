@@ -17,7 +17,7 @@ Route::get('/show/article/{article}',[ArticleController::class,'show'])->name('a
 
 Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name('byCategory');
 
-Route::get('/revisor/index', [RevisorController::class, 'index'])->name('revisor.index');
+Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
 Route::patch('/accept/{article}',[RevisorController::class,'accept'])->name('accept');
 
