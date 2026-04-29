@@ -30,9 +30,9 @@
 
     @auth
     @if(auth()->user()->is_revisor)
-    <li class="nav-item">
-        <a href="{{ route('revisor.index') }} " class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25">Zona revisore</a>
-    </li>
+    <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
+        <a href="{{ route('revisor.index') }} " class="nav-link btn btn-outline-warning btn-sm text-black">Zona revisore</a>
+    </ul>
     @endif
     <button class="hover-grow btn btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
 
