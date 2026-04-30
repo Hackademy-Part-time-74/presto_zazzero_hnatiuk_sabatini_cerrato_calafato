@@ -1,4 +1,6 @@
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    
+    @if(!auth()->user()->is_revisor)
     <div class="col-md-5 offset-md-1 mb-3 text-center">
         <h5>Vuoi diventare revisore?</h5>
         <p>Cliccando il bottone sottostante farai richiesta ai nostri admin</p>
@@ -15,6 +17,7 @@
         <a href="{{ route('become.revisor') }}" class="btn btn-warning w-25">Diventa Revisore</a>
         </div>
     </div>
+    @endif
 
     <div class="col-md-4 d-flex align-items-center"> 
         <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
