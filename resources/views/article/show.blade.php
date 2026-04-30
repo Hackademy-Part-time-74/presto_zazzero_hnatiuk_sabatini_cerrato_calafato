@@ -48,6 +48,9 @@
                 <div class="d-flex flex-column justify-content-end align-items-center h-75">
 
                     <h4 class="fw-bold mb-4">Prezzo: {{ $article->price }} €</h4>
+
+                    <!-- dare una rotta ed una vista al pulsante AGGIUNGI AL CARRELLO -->
+                     
                     <button type="submit" class="btn btn-sm w-50 btn-warning border border-3 border-warning text-dark fw-semibold">Aggiungi al Carrello <i class="bi bi-cart-plus-fill"></i></button>
                 </div>
             </div>

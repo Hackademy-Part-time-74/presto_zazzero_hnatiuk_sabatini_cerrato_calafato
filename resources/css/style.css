@@ -40,6 +40,11 @@ Sfondo Sezioni    Beige Sabbia (Oyster)    #D8D0BC
 
     border-color: var(--warning-color) !important;
 }
+/* Colore background badge */
+.bg-warning {
+
+    background-color: var(--warning-color) !important
+}
 
 /* Toglie underline dei link */
 a {

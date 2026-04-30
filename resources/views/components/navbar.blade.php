@@ -31,8 +31,8 @@
     @auth
     @if(auth()->user()->is_revisor)
     <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
-        <a href="{{ route('revisor.index') }} " class="nav-link btn btn-outline-warning btn-sm text-black">Zona revisore</a>
-        <span class="badge bg-danger">{{ \App\Models\Article::toBeRevisedCount() }}</span>
+        <a href="{{ route('revisor.index') }} " class="hover-grow nav-link text-black">Zona revisore</a>
+        <span class="badge bg-warning mt-2 mb-2 ms-2 rounded-3 text-black">{{ \App\Models\Article::toBeRevisedCount() }}</span>
     </ul>
     @endif
     <button class="hover-grow btn btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
