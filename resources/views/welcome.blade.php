@@ -6,6 +6,13 @@
         {{ session('errorMessage') }}
     </div>
     @endif
+
+    @if(session()->has('message'))
+    <div class="alert alert-success text-center shadow rounded w-50">
+        {{ session('message') }}
+    </div>
+    @endif
+
     <div class="container">
         <div class="row height-custom justify-content-center align-items-center p-4 g-4">
             @forelse ($articles as $article)
@@ -19,4 +26,6 @@
             @endforelse
         </div>
     </div>
+
+    
 </x-layout>
