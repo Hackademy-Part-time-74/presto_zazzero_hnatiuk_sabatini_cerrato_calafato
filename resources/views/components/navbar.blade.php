@@ -34,7 +34,7 @@
         </li>
     </ul>
 
-    <form class="d-flex md-auto" role="search" action="" method="GET">
+    <form class="d-flex md-auto" role="search" action="{{ route('article.search') }}" method="GET">
         <div class="input-group">
             <input class="form-control" type="search" name="query" placeholder="Cerca" aria-label="Search"/>
             <button class="input-group-text btn btn-outline-warning" type="submit" id="basic-addon2"><i class="bi bi-search"></i></button>

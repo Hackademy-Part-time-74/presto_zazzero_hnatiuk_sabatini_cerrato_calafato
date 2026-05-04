@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Laravel\Scout\Searchable;
+use Illuminate\Http\Request;
 
 class Article extends Model
 {
@@ -44,4 +45,5 @@ class Article extends Model
             'category'=>$this->category
         ];
     }
+ 
 }
