@@ -2,10 +2,8 @@
     <div class="container-fluid pt-5">
         <div class="row justify-content-center mb-5">
             <div class="col-3">
-                <div class="rounded shadow bg-body-secondary justify-content-center">
-                    <h1 class="display-5 text-center pb-2 ">
-                        Revisor Dashboard
-                    </h1>
+                <div class="rounded justify-content-center">
+                    <h1 class="display-5 text-center pb-2 ">Revisor Dashboard</h1>
                 </div>
             </div>
         </div>
@@ -54,7 +52,7 @@
         @else
             <div class="row justify-content-center align-items-center height-custom text-center">
                 <div class="col-12">
-                    <h2 class="display-4"> Nessun articolo da revisionare </h2>
+                    <h2 class="fw-light"> Nessun articolo da revisionare </h2>
                     <a href="{{ route('homepage') }}" class="mt-5 btn text-warning">Torna all'homepage</a>
                 </div>
             </div>

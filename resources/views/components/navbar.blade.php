@@ -9,9 +9,10 @@
 
     @auth
     @if(auth()->user()->is_revisor)
-    <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
-        <a href="{{ route('revisor.index') }} " class="hover-grow nav-link text-black">Zona revisore</a>
-        <span class="badge bg-warning mt-2 mb-2 ms-2 rounded-3 text-black">{{ \App\Models\Article::toBeRevisedCount() }}</span>
+    <ul class="nav col-12 col-sm-auto col-md-auto justify-content-center mb-md-0 position-relative">
+        <a href="{{ route('revisor.index') }} " class="hover-grow nav-link text-black ">Zona revisore
+            <span class="badge bg-warning mt-2 rounded-3 text-black">{{ \App\Models\Article::toBeRevisedCount() }}</span>
+        </a>
     </ul>
     @endif
 
@@ -34,7 +35,7 @@
         </li>
     </ul>
 
-    <form class="d-flex md-auto" role="search" action="{{ route('article.search') }}" method="GET">
+    <form class="d-flex md-auto me-2" role="search" action="{{ route('article.search') }}" method="GET">
         <div class="input-group">
             <input class="form-control" type="search" name="query" placeholder="Cerca" aria-label="Search"/>
             <button class="input-group-text btn btn-outline-warning" type="submit" id="basic-addon2"><i class="bi bi-search"></i></button>

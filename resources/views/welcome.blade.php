@@ -1,6 +1,6 @@
 <x-layout>
 
-    <h1 class="text-center">HOME PAGE</h1>
+    <h1 class="text-center pt-5">HOME PAGE</h1>
     @if(session()->has('errorMessage'))
     <div class="alert alert-danger text-center shadow rounded w-50">
         {{ session('errorMessage') }}
