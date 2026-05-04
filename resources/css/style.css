@@ -35,6 +35,13 @@ Sfondo Sezioni    Beige Sabbia (Oyster)    #D8D0BC
     background-color: var(--warning-color) !important;
 }
 
+.btn-outline-warning {
+
+    border-color: var(--warning-color) !important;
+    background-color: var(--warning-color) !important;
+    color: var(--secondary-color) !important;
+}
+
 /* Colore bordo personalizzato per i bottoni */
 .border-warning {
 
@@ -59,7 +66,7 @@ a {
 }
 
 .hover-grow{
-    transition: transform 0,3s ease;
+    transition: transform 0.2s ease;
 }
 
 .hover-grow:hover{

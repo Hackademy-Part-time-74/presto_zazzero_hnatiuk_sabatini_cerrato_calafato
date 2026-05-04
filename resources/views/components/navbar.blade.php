@@ -1,11 +1,19 @@
 <nav class="bg-info shadow-sm sticky-top customText d-flex flex-wrap
             align-items-center justify-content-center justify-content-md-between
             p-3 mb-4 border-bottom">
-    <div class="col-md-3 mb-2 mb-md-0">
+    <div class="col-md-auto mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
             <img src="{{ asset('images/logo_Presto.png') }}" width="50" height="50" alt="Logo">
         </a>
     </div>
+
+    @auth
+    @if(auth()->user()->is_revisor)
+    <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
+        <a href="{{ route('revisor.index') }} " class="hover-grow nav-link text-black">Zona revisore</a>
+        <span class="badge bg-warning mt-2 mb-2 ms-2 rounded-3 text-black">{{ \App\Models\Article::toBeRevisedCount() }}</span>
+    </ul>
+    @endif
 
 
     <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
@@ -24,18 +32,16 @@
                 @endforeach
             </ul>
         </li>
-
-
     </ul>
 
-    @auth
-    @if(auth()->user()->is_revisor)
-    <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
-        <a href="{{ route('revisor.index') }} " class="hover-grow nav-link text-black">Zona revisore</a>
-        <span class="badge bg-warning mt-2 mb-2 ms-2 rounded-3 text-black">{{ \App\Models\Article::toBeRevisedCount() }}</span>
-    </ul>
-    @endif
-    <button class="hover-grow btn btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
+    <form class="d-flex md-auto" role="search" action="" method="GET">
+        <div class="input-group">
+            <input class="form-control" type="search" name="query" placeholder="Cerca" aria-label="Search"/>
+            <button class="input-group-text btn btn-outline-warning" type="submit" id="basic-addon2"><i class="bi bi-search"></i></button>
+        </div>
+    </form>
+  
+    <button class="hover-grow btn btn-sm btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
 
     <div class="d-flex p-2 justify-content-center">
         <ul class="nav-item dropdown">
