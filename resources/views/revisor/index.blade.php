@@ -1,12 +1,15 @@
 <x-layout>
     <div class="container-fluid pt-5">
         <div class="row justify-content-center mb-5">
-            <div class="col-3">
+            <div class="col-12">
                 <div class="rounded justify-content-center">
-                    <h1 class="display-5 text-center pb-2 ">Revisor Dashboard</h1>
+                    <h1 class="display-5 text-center pb-2 ">Revisor Dashboard <a href="#" class="btn btn-sm btn-warning ms-5 hover-grow ">Articoli revisionati</a>
+                    </h1>
                 </div>
             </div>
         </div>
+
+        
 
        @if(session()->has('message'))
        <div class="row justify-content-center">

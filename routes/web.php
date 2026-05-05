@@ -28,3 +28,7 @@ Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->mid
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
+Route::get('/revisor/index-status',[RevisorController::class,'articleTable'])->name('revisor.index-status');
+
+Route::get('/revisor/modify-status/{article}',[RevisorController::class,'modifyStatus'])->name('revisor.modify-status');

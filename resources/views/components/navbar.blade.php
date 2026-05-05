@@ -15,7 +15,7 @@
         </a>
     </ul>
     @endif
-
+    @endauth
 
     <ul class="nav col-12 col-md-auto justify-content-center mb-md-0">
         <li><a href="/" class="hover-grow nav-link px-2 link-dark hover-link">Home</a></li>
@@ -35,13 +35,14 @@
         </li>
     </ul>
 
-    <form class="d-flex md-auto me-2" role="search" action="{{ route('article.search') }}" method="GET">
+    <form class="d-flex md-auto me-4" role="search" action="{{ route('article.search') }}" method="GET">
         <div class="input-group">
             <input class="form-control" type="search" name="query" placeholder="Cerca" aria-label="Search"/>
             <button class="input-group-text btn btn-outline-warning" type="submit" id="basic-addon2"><i class="bi bi-search"></i></button>
         </div>
     </form>
-  
+    
+    @auth
     <button class="hover-grow btn btn-sm btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
 
     <div class="d-flex p-2 justify-content-center">
@@ -60,7 +61,7 @@
     </div>
 
     @else
-    <div class="col-md-3 text-end">
+    <div class="col-md-8 col-lg-3 justify-md-content-center text-end py-2">
 
         <button type="button" class="hover-grow btn btn-sm btn-outline-warning border border-3 border-warning px-4 me-3">
             <a href="{{ route('login')}}" class="text-black"> Login <i class="bi bi-box-arrow-in-right"></i></a>
@@ -69,6 +70,7 @@
         <button type="button" class="hover-grow btn btn-sm btn-outline-warning border border-3 border-warning">
             <a href="{{ route('register')}}" class="text-black">Registrati <i class="bi bi-person-fill-add"></i></a>
         </button>
+
     </div>
     @endauth
 </nav>

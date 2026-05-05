@@ -27,6 +27,21 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', "Hai rifiutato l'articolo $article->title");
     }
 
+    public function articleTable() 
+    {
+        $articles = Article::whereNotNull('is_accepted')->get();
+        return view('revisor.index-status', [
+            'articles' => $articles,
+        ]);
+    } 
+
+    public function modifyStatus(Article $article) 
+    {
+        return view('revisor.modify-status', [
+            'article' => $article,
+        ]);
+    }
+
     public function becomeRevisor(){
         Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
         return redirect()->route('homepage')->with('message', 'Complimenti, hai richiesto di diventare revisor!');
