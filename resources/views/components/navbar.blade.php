@@ -43,7 +43,7 @@
     </form>
     
     @auth
-    <button class="hover-grow btn btn-sm btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
+     <button class="hover-grow btn btn-sm btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">Crea Articolo<i class="bi bi-journal-plus ms-2"></i></a></button>
 
     <div class="d-flex p-2 justify-content-center">
         <ul class="nav-item dropdown">
