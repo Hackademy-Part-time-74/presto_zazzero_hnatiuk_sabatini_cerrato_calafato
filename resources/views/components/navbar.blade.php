@@ -1,6 +1,6 @@
 <nav class="bg-info shadow-sm sticky-top customText d-flex flex-wrap
             align-items-center justify-content-center justify-content-md-between
-            p-3 mb-4 border-bottom">
+            p-3 mb-4 border-bottom bg-danger">
     <div class="col-md-auto mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
             <img src="{{ asset('images/logo_Presto.png') }}" width="50" height="50" alt="Logo">
