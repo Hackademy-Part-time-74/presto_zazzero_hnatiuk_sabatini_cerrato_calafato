@@ -17,14 +17,14 @@ class RevisorController extends Controller
         return view('revisor.index', compact('article_to_check'));
     }
     
-    public function accept(Article $article){
+    public function accept(Article $article, string $routeName){
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Hai accettato l'articolo $article->title");
+        return redirect(route($routeName))->with('message', "Hai accettato l'articolo $article->title");
     }
 
-      public function reject(Article $article){
+      public function reject(Article $article, string $routeName){
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Hai rifiutato l'articolo $article->title");
+        return redirect(route($routeName))->with('message', "Hai rifiutato l'articolo $article->title");
     }
 
     public function articleTable() 

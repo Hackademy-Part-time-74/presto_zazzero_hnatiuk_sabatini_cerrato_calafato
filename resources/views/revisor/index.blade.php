@@ -39,12 +39,12 @@
                     <p class="h6">{{ $article_to_check->description }}</p>
                 </div>
             <div class="d-flex pb-4 justify-content-around">
-                <form action="{{ route('reject',['article'=>$article_to_check]) }}" method="POST">
+                <form action="{{ route('reject',['article'=>$article_to_check, 'routeName'=>'revisor.index']) }}" method="POST">
                     @csrf
                     @method('PATCH')
                     <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
                 </form>
-                 <form action="{{ route('accept',['article'=>$article_to_check]) }}" method="POST">
+                 <form action="{{ route('accept',['article'=>$article_to_check, 'routeName'=>'revisor.index']) }}" method="POST">
                     @csrf
                     @method('PATCH')
                     <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>

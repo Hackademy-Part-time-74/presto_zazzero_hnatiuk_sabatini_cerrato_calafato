@@ -19,9 +19,9 @@ Route::get('/category/{category}',[ArticleController::class,'byCategory'])->name
 
 Route::get('/revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
 
-Route::patch('/accept/{article}',[RevisorController::class,'accept'])->name('accept');
+Route::patch('/accept/{article}/{routeName}',[RevisorController::class,'accept'])->name('accept');
 
-Route::patch('/reject/{article}',[RevisorController::class,'reject'])->name('reject');
+Route::patch('/reject/{article}/{routeName}',[RevisorController::class,'reject'])->name('reject');
 
 Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
 
@@ -29,6 +29,6 @@ Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->n
 
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
 
-Route::get('/revisor/index-status',[RevisorController::class,'articleTable'])->name('revisor.index-status');
+Route::get('/revisor/index-status',[RevisorController::class,'articleTable'])->middleware('isRevisor')->name('revisor.index-status');
 
-Route::get('/revisor/modify-status/{article}',[RevisorController::class,'modifyStatus'])->name('revisor.modify-status');
+Route::get('/revisor/modify-status/{article}',[RevisorController::class,'modifyStatus'])->middleware('isRevisor')->name('revisor.modify-status');

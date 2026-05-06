@@ -19,7 +19,7 @@
 <body>
     <x-navbar/>
 
-    <div>
+    <div class="vh-100">
         {{ $slot }}
     </div>
 
