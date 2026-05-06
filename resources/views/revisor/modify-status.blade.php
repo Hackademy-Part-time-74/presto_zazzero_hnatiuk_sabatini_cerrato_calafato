@@ -19,7 +19,7 @@
         @endif
 
         <div class="row justify-content-center">
-            <div class="col-3 ps-4 d-flex flex-column justify-content-between rounded-2 shadow-lg p-3">
+            <div class="col-4 ps-4 d-flex flex-column justify-content-between rounded-2 shadow-lg p-3">
                 <div class="justify-content-center">
                     <h2>Titolo: {{ $article->title }}</h2>
                     <h3>Autore: {{ $article->user->name }} </h3>

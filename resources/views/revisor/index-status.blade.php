@@ -1,10 +1,13 @@
 <x-layout>
 
-    <div class="container">
-        <table class="table table-bordered border-black mt-3 shadow-lg ">
+    <div class="container rounded-3">
+
+        <h1 class="display-5 text-center mt-5 mb-3">Articoli creati</h1>
+
+        <table class="table table-bordered border-black mt-3 shadow-lg w-75 mx-auto">
             <thead class="text-center">
                 <tr>
-                    <th>Articolo</th>
+                    <th>Titolo</th>
                     <th>Stato</th>
                     <th>Modifica</th>
                 </tr>            

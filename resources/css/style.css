@@ -59,12 +59,13 @@ a {
     font-family: "Sora", serif;
 }
 
-
+/* Colore testo  */
 .text-warning {
 
     color: var(--warning-color) !important;
 }
 
+/* Piccola animazione su hover */
 .hover-grow{
     transition: transform 0.2s ease;
 }
