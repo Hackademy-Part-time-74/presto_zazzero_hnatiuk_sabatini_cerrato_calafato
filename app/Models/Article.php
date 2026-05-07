@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Laravel\Scout\Searchable;
 use Illuminate\Http\Request;
 
@@ -39,11 +40,14 @@ class Article extends Model
 
     public function toSearchableArray(){
         return [
-            'id' => $this->id, 
+            'id' => $this->id,
             'title' => $this->title,
-            'description'=>$this->description, 
+            'description'=>$this->description,
             'category'=>$this->category
         ];
     }
- 
+
+    public function images(): HasMany{
+        return $this->hasMany(Image::class);
+    }
 }

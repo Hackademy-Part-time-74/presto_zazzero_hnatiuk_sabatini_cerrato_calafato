@@ -6,9 +6,16 @@ use Livewire\Component;
 use App\Models\Article;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
+use Livewire\WithFileUploads;
 
 class CreateArticleForm extends Component
 {
+    use WithFileUploads;
+
+    public $images = [];
+    public $temporary_images;
+
+
     #[Validate('required|min:3')]
     public $title;
 
@@ -22,7 +29,7 @@ class CreateArticleForm extends Component
     public $category;
     public $article;
 
-    public function store() 
+    public function store()
     {
         $this->validate();
         $this->article=Article::create([
@@ -41,5 +48,18 @@ class CreateArticleForm extends Component
     public function render()
     {
         return view('livewire.create-article-form');
+    }
+
+    public function updatedTemporaryimages(){
+
+        if($this->validate([
+            'temporary_images.*' => 'image|max:1024',
+            'temporary_images' => 'max:6',
+        ])) {
+            foreach($this->temporary_images as $image) {
+                $this->image[] = $image;
+            }
+        }
+
     }
 }

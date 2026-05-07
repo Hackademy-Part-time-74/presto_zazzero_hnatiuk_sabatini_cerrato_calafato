@@ -1,5 +1,5 @@
 <form class="shadow-lg p-5 rounded-5 border border-2 border-warning" wire:submit="store">
-    
+
     <div class="mb-3">
         <label for="title" class="form-label">Titolo:</label>
         <input type="text" class="form-control @error('title') is-invalid @enderror" id="title" wire:model.blur="title" value="{{ old('title') }}">
@@ -7,6 +7,32 @@
         <p class="fst-italic text-danger">{{ $message }}</p>
         @enderror
     </div>
+
+    <div class="mb-3">
+            <input type="file" wire:model.live="temporary_images" multiple
+            class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="img/">
+            @error('temporary_images.*')
+            <p class="text-danger">{{ $message }}</p>
+            @enderror
+            @error('temporary_images')
+            <p class="text-danger">{{ $message }}</p>
+            @enderror
+        </div>
+
+        @if (!empty($images))
+             <div class="row">
+                <div class="col-12">
+                    <p>Photo preview: </p>
+                    <div class="row border border-4 border-success rounded shadow py-4">
+                        @foreach ($images as $key => $image)
+                        <div class="col d-flex flex-column align-items-center my-3">
+                            <div class="img-preview mx-auto shadow rounded" style="background-image: url({{ $image-temporaryUrl() }});"></div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        @endif
 
     <div class="mb-3">
         <label for="description" class="form-label">Descrizione:</label>
@@ -45,4 +71,6 @@
             {{ session('success') }}
         </div>
     @endif
+
 </form>
+
