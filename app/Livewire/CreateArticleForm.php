@@ -57,9 +57,15 @@ class CreateArticleForm extends Component
             'temporary_images' => 'max:6',
         ])) {
             foreach($this->temporary_images as $image) {
-                $this->image[] = $image;
+                $this->images[] = $image;
             }
         }
 
+    }
+
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->images))){
+            unset($this->images[$key]);
+        }
     }
 }
