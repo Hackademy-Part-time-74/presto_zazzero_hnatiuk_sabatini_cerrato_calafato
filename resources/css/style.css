@@ -65,13 +65,26 @@ a {
     color: var(--warning-color) !important;
 }
 
-/* Piccola animazione su hover */
+/* Animazioni su hover */
 .hover-grow{
     transition: transform 0.2s ease;
 }
 
 .hover-grow:hover{
     transform:scale(1.2);
+}
+
+.hover-exit:hover{
+
+    background-color: #ececec;
+}
+
+.table-radius{
+
+    border: 1px solid black;
+    border-radius: 12px;
+    overflow: hidden;
+
 }
 
 .img-preview{

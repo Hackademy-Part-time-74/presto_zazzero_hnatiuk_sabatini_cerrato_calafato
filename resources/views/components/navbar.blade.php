@@ -50,10 +50,10 @@
             <a href="#" class="hover-grow nav-link dropdown-toggle mt-3 text-black" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                     Ciao {{ auth()->user()->name }} <i class="bi bi-person-fill"> </i></a>
             <li class="dropdown-menu">
-                <ul>
-                    <form action="{{ route('logout')}}" method="POST" id="form-logout">
+                <ul class="hover-exit">
+                    <form action="{{ route('logout')}}" method="POST" id="form-logout" >
                     @csrf
-                        <button type="submit" class="btn text-black">Esci<i class="bi bi-door-open ms-2"></i></button>
+                        <button type="submit" class="btn btn-sm text-black">Esci<i class="bi bi-door-open ms-2"></i></button>
                     </form>
                 </ul>
             </li>

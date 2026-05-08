@@ -6,26 +6,26 @@
                     @csrf
                     <h1 class="h3 mb-5 fw-normal">Registrati</h1>
                      <div class="form-floating mb-4"> 
-                        <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Name" value="{{ old('name') }}">
+                        <input type="text" class="form-control shadow-sm" id="floatingInput" name="name" placeholder="Name" value="{{ old('name') }}">
                         @error('name')<span class="small text-danger">{{ $message }}</span>@enderror
-                        <label for="floatingInput">Name</label> 
+                        <label for="floatingInput">Nome</label> 
                     </div>
                     <div class="form-floating mb-4"> 
-                        <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com" value="{{ old('email') }}">
+                        <input type="email" class="form-control shadow-sm" id="floatingInput" name="email" placeholder="name@example.com" value="{{ old('email') }}">
                         @error('email')<span class="small text-danger">{{ $message }}</span>@enderror 
-                        <label for="floatingInput">Email address</label> 
+                        <label for="floatingInput">Indirizzo e-mail</label> 
                     </div>
                     <div class="form-floating mb-4"> 
-                        <input type="password" class="form-control" id="floatingPassword" name="password" placeholder="Password">
+                        <input type="password" class="form-control shadow-sm" id="floatingPassword" name="password" placeholder="Password">
                         @error('password')<span class="small text-danger">{{ $message }}</span>@enderror 
                         <label for="floatingPassword">Password</label> 
                     </div>
                     <div class="form-floating mb-4"> 
-                        <input type="password" class="form-control" id="floatingPasswordConfirmation" name="password_confirmation" placeholder="Password Confirmation">
+                        <input type="password" class="form-control shadow-sm" id="floatingPasswordConfirmation" name="password_confirmation" placeholder="Password Confirmation">
                         @error('password_confirmation')<span class="small text-danger">{{ $message }}</span>@enderror 
-                        <label for="floatingPassword">Password Confirmation</label> 
+                        <label for="floatingPassword">Conferma Password </label> 
                     </div>
-                    <button class="btn btn-warning w-25 py-2 mb-3 fw-semibold mt-3" type="submit">Registrati</button>
+                    <button class="btn btn-warning w-25 py-2 mb-3 fw-semibold mt-3 shadow" type="submit">Registrati</button>
 
                     <p>Sei già registrato? <a href="{{ route('login') }}" class="text-warning">Accedi</a></p>
                 </form>
