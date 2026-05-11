@@ -9,6 +9,7 @@
                 <thead class="text-center">
                     <tr>
                         <th>Titolo</th>
+                        <th>Autore</th>
                         <th>Stato</th>
                         <th>Modifica</th>
                     </tr>
@@ -18,6 +19,8 @@
                     @foreach ( $articles as $article)
                     <tr>
                         <td>{{ $article->title }}</td>
+
+                        <td> {{ $article->user->name }}</td>
 
                         <td>@if ($article->is_accepted)
                             <i class="bi bi-check-circle-fill text-success fs-4"></i>
@@ -33,6 +36,8 @@
 
             </table>
         </div>
+
+        {{ $articles->links() }}
     </div>
 
 
