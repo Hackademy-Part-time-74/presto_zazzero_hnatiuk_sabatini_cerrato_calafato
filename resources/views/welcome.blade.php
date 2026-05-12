@@ -1,6 +1,7 @@
 <x-layout>
 
     <h1 class="text-center pt-5">HOME PAGE</h1>
+    <h2>CIAO</h2>
 
     @if(session()->has('errorMessage'))
     <div class="container text-center">
