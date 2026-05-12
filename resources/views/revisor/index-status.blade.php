@@ -37,7 +37,9 @@
             </table>
         </div>
 
-        {{ $articles->links() }}
+        <div class="mt-2 p-2">
+            {{ $articles->links() }}
+        </div>
     </div>
 
 

@@ -4,6 +4,7 @@ namespace App\Jobs;
 
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
+use Spatie\Image\Enums\CropPosition;
 use Spatie\Image\Image;
 
 class ResizeImage implements ShouldQueue
@@ -14,6 +15,7 @@ class ResizeImage implements ShouldQueue
      * Create a new job instance.
      */
     private $w, $h, $fileName, $path;
+
     public function __construct($filePath, $w, $h)
     {
         $this->path = dirname($filePath);
