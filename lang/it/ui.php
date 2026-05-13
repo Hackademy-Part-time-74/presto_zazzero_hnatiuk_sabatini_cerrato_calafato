@@ -1,0 +1,28 @@
+<?php
+return
+    [
+        'home' => 'Home', 
+        'articles' => 'Articoli', 
+        'categories' => 'Categorie', 
+        'category' => 'Categoria',
+        'search' => 'Cerca', 
+        'revisorZone' => 'Zona revisore', 
+        'createArticle' => 'Crea Articolo', 
+        'login' => 'Login', 
+        'register' => 'Registrati',
+        'logout' => 'Esci', 
+        'hello' => 'Ciao',
+        'confirm' => 'Conferma', 
+        'allArticles' => 'Tutti gli Articoli', 
+        'articleDetails' => 'Dettagli articolo',
+        'Abbigliamento' => 'Abbigliamento',
+        'Accessori' => 'Accessori',
+        'Animali Domestici' => 'Animali Domestici',
+        'Casa e Giardinaggio' => 'Casa E Giardinaggio',
+        'Elettronica' => 'Elettronica',
+        'Giocattoli' => 'Giocattoli',
+        'Libri e Riviste' => 'Libri E Riviste',
+        'Motori' => 'Motori',
+        'Salute e Bellezza' => 'Salute E Bellezza',
+        'Sport' => 'Sport',
+    ];
