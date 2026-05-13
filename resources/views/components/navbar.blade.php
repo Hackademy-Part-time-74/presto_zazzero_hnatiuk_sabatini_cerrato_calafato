@@ -46,7 +46,7 @@
     <x-_locale lang="it"/>
     <x-_locale lang="uk"/>
     <x-_locale lang="es"/>
-    
+
     @auth
      <button class="hover-grow btn btn-sm btn-warning border border-3 border-warning text-black"><a href="{{ route('create.article') }}" class="nav-link px-2">{{ __('ui.createArticle') }}<i class="bi bi-journal-plus ms-2"></i></a></button>
 
@@ -73,7 +73,7 @@
         </button>
 
         <button type="button" class="hover-grow btn btn-sm btn-outline-warning border border-3 border-warning">
-            <a href="{{ route('register')}}" class="text-black">{{ __('ui.logout') }} <i class="bi bi-person-fill-add"></i></a>
+            <a href="{{ route('register')}}" class="text-black">{{ __('ui.register') }} <i class="bi bi-person-fill-add"></i></a>
         </button>
 
     </div>

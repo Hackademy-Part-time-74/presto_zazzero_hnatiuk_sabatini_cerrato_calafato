@@ -9,11 +9,11 @@
         <h6 class="card-subtitle text-body-secondary">{{ $article->price }} €</h6>
 
         <div class="mt-3">
-            <span> Categoria: <a href="{{ route('byCategory',['category'=>$article->category]) }}" class="text-warning fw-semibold">{{ $article->category->name }}</a></span>
+            <span> {{ __('ui.category') }}: <a href="{{ route('byCategory',['category'=>$article->category]) }}" class="text-warning fw-semibold">{{__("ui.".$article->category->name) }}</a></span>
         </div>
 
         <div class="d-flex justify-content-evenly align-items-center mt-3">
-            <a href="{{ route ('article.show',compact('article')) }}" class="btn btn-warning border border-3 border-warning text-black fs-semibold">Dettagli articolo</a>
+            <a href="{{ route ('article.show',compact('article')) }}" class="btn btn-warning border border-3 border-warning text-black fs-semibold">{{__('ui.articleDetails') }}</a>
         </div>
     </div>
 </div>
