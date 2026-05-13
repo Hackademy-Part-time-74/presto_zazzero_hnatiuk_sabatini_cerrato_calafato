@@ -5,6 +5,9 @@
                 <div class="rounded justify-content-center">
                     <h1 class="display-5 text-center pb-2 ">Revisiona articolo</h1>
                 </div>
+                <div class="text-center">
+                    <a href="{{ route('revisor.index-status') }}" class="btn btn-warning btn">Torna indietro</a>
+                </div>
             </div>
         </div>
 
@@ -20,8 +23,10 @@
 
         <div class="row justify-content-center">
             <div class="col-6">
-                 <img src="https://picsum.photos/400" class="d-block w-100 rounded shadow" alt="...">
+            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}"
+                class="card-img-top" alt="immagine articolo {{ $article->title }}">
             </div>
+
             <div class="col-6 ps-4 d-flex flex-column justify-content-between rounded-2 shadow-lg p-3">
                 <div class="justify-content-around">
                     <h2>Titolo: {{ $article->title }}</h2>

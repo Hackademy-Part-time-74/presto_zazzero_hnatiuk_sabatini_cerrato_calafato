@@ -10,6 +10,7 @@
                     <tr>
                         <th>Titolo</th>
                         <th>Autore</th>
+                        <th>Data di creazione</th>
                         <th>Stato</th>
                         <th>Modifica</th>
                     </tr>
@@ -21,6 +22,8 @@
                         <td>{{ $article->title }}</td>
 
                         <td> {{ $article->user->name }}</td>
+
+                        <td> {{ $article->created_at->format('d/m/Y') }}</td>
 
                         <td>@if ($article->is_accepted)
                             <i class="bi bi-check-circle-fill text-success fs-4"></i>
@@ -37,7 +40,9 @@
             </table>
         </div>
 
-        {{ $articles->links() }}
+        <div class="mt-2 p-2">
+            {{ $articles->links() }}
+        </div>
     </div>
 
 

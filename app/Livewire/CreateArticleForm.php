@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Jobs\ResizeImage;
 use Livewire\Component;
 use App\Models\Article;
 use Livewire\Attributes\Validate;
@@ -49,9 +50,10 @@ class CreateArticleForm extends Component
             File::deleteDirectory(storage_path('/app/livewire-tmt'));
         }
         session()->flash('success','Articolo creato correttamente');
-        //$this->cleanForm();
+
         $this->reset();
     }
+    
     protected function cleanForm() {
         $this->title='';
         $this->description='';

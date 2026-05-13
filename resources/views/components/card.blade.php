@@ -1,6 +1,8 @@
 <div class="card mx-auto rounded-4 card-w shadow text-center mb-3">
-    <a href="{{ route ('article.show',compact('article')) }}"><img src="{{ $article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : 'https://picsum.photos/300'}}"
-        class="card-img-top" alt="immagine articolo {{ $article->title }}"></a>
+    <a href="{{ route ('article.show',compact('article')) }}">
+        <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}"
+        class="card-img-top" alt="immagine articolo {{ $article->title }}">
+    </a>
 
     <div class="card-body bg-info">
         <h5 class="card-title">{{ $article->title }}</h5>
