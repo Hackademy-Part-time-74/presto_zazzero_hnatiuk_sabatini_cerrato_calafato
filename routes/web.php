@@ -32,3 +32,5 @@ Route::get('/search/article', [PublicController::class, 'searchArticles'])->name
 Route::get('/revisor/index-status',[RevisorController::class,'articleTable'])->middleware('isRevisor')->name('revisor.index-status');
 
 Route::get('/revisor/modify-status/{article}',[RevisorController::class,'modifyStatus'])->middleware('isRevisor')->name('revisor.modify-status');
+
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
