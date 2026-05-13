@@ -1,7 +1,7 @@
 <x-layout>
 
     <h1 class="text-center pt-5">HOME PAGE</h1>
-
+    
     @if(session()->has('errorMessage'))
     <div class="container text-center">
         <div class="alert alert-danger text-center shadow rounded w-50">

@@ -94,3 +94,21 @@ a {
     height: 120px;
     width: 120px;
 }
+
+
+.page-link {
+
+    background-color:#f8f5f3 !important;
+
+    color: #060606;
+}
+
+.active > .page-link {
+
+    background-color: #fd9603 !important;
+
+    color: #060606;
+
+    border-color: #fd9603  !important;
+
+}
