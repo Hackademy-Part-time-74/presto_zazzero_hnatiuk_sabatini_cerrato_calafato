@@ -27,16 +27,10 @@
                     @if($article_to_check->images->count())
                     @foreach ($article_to_check->images as $key=>$image)
                         <div class="col-6 col-md-4 mb-4">
-                            <img src="{{ $article_to_check->images->isNotEmpty() ? $article_to_check->images->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}"
+                            <img src="{{ $article_to_check->images->isNotEmpty() ? $image->getUrl(300, 300) : 'https://picsum.photos/300'}}"
                                     class="card-img-top" alt="immagine articolo {{ $article_to_check->title }}">
                         </div>
                     @endforeach
-                @else
-                    @for($i = 0; $i < 6; $i++)
-                        <div class="col-6 col-md-4 mb-4 text-center">
-                            <img src="https://picsum.photos/300" alt="immagine articolo" class="img-fluid rounded shadow">
-                        </div>
-                    @endfor
                 @endif
                 </div>
             </div>

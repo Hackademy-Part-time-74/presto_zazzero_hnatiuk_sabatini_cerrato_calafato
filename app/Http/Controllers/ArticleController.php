@@ -18,8 +18,11 @@ class ArticleController extends Controller implements HasMiddleware
         ];
     }
 
-    public function create() 
+    public function create()
     {
+        if(auth()->user()->is_revisor){
+            return redirect('revisor/index');
+        }
         return view('article.create');
     }
 
@@ -27,7 +30,7 @@ class ArticleController extends Controller implements HasMiddleware
     {
         return view('article.show',compact('article'));
     }
-    
+
     public function byCategory(Category $category)
     {
         $articles = $category->articles->where('is_accepted',true);
