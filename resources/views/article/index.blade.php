@@ -1,13 +1,13 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row height-custom justify-content-center align-items-center text-center">
             <div class="col-12 pt-5">
                 <h1 class="display-5">Tutti gli Articoli</h1>
             </div>
         </div>
-        <div class="row height-custom justify-content-center align-items-center py-5">
+        <div class="row height-custom justify-content-center align-items-center py-5 g-3">
             @forelse ($articles as $article)
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-4 ">
                     <x-card :article="$article"/>
                 </div>
             @empty

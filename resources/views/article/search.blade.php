@@ -1,5 +1,5 @@
 <x-layout>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row py-5 justify-content-center align-items-center text-center">
             <div class="col-12">
                 <h1 class="display-5">Risultati per la ricerca:</h1>
@@ -10,7 +10,7 @@
         <div class="row height-custom justify-content-center align-items-center py-5">
             
             @forelse ( $articles as $article )
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-6 col-lg-4 col-xl-4 ">
                     <x-card :article="$article" />
                 </div>
                 @empty

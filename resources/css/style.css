@@ -79,14 +79,6 @@ a {
     background-color: #ececec;
 }
 
-.table-radius{
-
-    border: 1px solid black;
-    border-radius: 12px;
-    overflow: hidden;
-
-}
-
 .img-preview{
     background-position: center;
     background-repeat: no-repeat;
@@ -112,3 +104,14 @@ a {
     border-color: #fd9603  !important;
 
 }
+/* .height-custom{
+   max-height:25rem;
+}
+
+.card-w{
+   max-width:25rem;
+} */
+/* .custom-card {
+    max-width:20rem!important ;
+    max-height:20rem!important;
+} */
