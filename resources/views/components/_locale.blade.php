@@ -2,5 +2,6 @@
     @csrf
     <button type="submit" class="btn">
         <img src="{{ asset('vendor/blade-flags/country-'.$lang.'.svg') }}" width="32" height="32">
+        <span>{{$lang}}</span>
     </button>
 </form>
