@@ -1,11 +1,11 @@
-<div class="card mx-auto card-w rounded-4 shadow text-center mb-3">
+<div class="card mx-auto card-w rounded-4 shadow text-center mb-3 h-100">
     <a href="{{ route ('article.show',compact('article')) }}">
         <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}"
-        class="card-img-top" alt="immagine articolo {{ $article->title }}">
+        class="card-img-top img-card-custom" alt="immagine articolo {{ $article->title }}">
     </a>
 
     <div class="card-body bg-info">
-        <h5 class="card-title">{{ $article->title }}</h5>
+        <h5 class="card-title text-overflow pt-3">{{ $article->title }}</h5>
         <h6 class="card-subtitle text-body-secondary">{{ $article->price }} €</h6>
 
         <div class="mt-3">

@@ -104,14 +104,22 @@ a {
     border-color: #fd9603  !important;
 
 }
-/* .height-custom{
-   max-height:25rem;
-}
 
-.card-w{
-   max-width:25rem;
-} */
-/* .custom-card {
-    max-width:20rem!important ;
-    max-height:20rem!important;
-} */
+    .card-w{
+        width:100%;
+        max-width:380px;
+        min-height:490px;
+    }
+
+    .img-card-custom{
+        height:300px;
+        object-fit:cover;
+    }
+
+    /* Taglia il testo in una riga con ... */
+    .text-overflow{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+ 

@@ -42,10 +42,17 @@
         </div>
     </form>
 
+        <div class="dropdown">
+    <button class="btn dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+        Language:  <i class=" ms-1 bi bi-globe-americas-fill"></i>
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#"><x-_locale lang="it"/> italiano</a></li>
+        <li><a class="dropdown-item" href="#"><x-_locale lang="uk"/>english</a></li>
+        <li><a class="dropdown-item" href="#"><x-_locale lang="es"/>espanol</a></li>
+    </ul>
+    </div>
 
-    <x-_locale lang="it"/>
-    <x-_locale lang="uk"/>
-    <x-_locale lang="es"/>
 
     @auth
     @if(!auth()->user()->is_revisor)
