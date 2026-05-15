@@ -30,6 +30,55 @@
                             <img src="{{ $article_to_check->images->isNotEmpty() ? $image->getUrl(300, 300) : 'https://picsum.photos/300'}}"
                                     class="card-img-top" alt="immagine articolo {{ $article_to_check->title }}">
                         </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5>Labels</h5>
+                                @if ($image->labels)
+                                    @foreach ($image->labels as $label)
+                                        #{{ $label }},
+                                    @endforeach
+                                @else
+                                    <p class="fst-italic">No labels</p>
+
+                                @endif
+                                <h5>Ratings</h5>
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->adult }}"></div>
+                                        <div class="col-10">Adult</div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->violence }}"></div>
+                                        <div class="col-10">Violence</div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->spoof }}"></div>
+                                        <div class="col-10">Spoof</div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->racy }}"></div>
+                                        <div class="col-10">Racy</div>
+                                    </div>
+                                </div>
+
+                                <div class="row justify-content-center">
+                                    <div class="col-2">
+                                        <div class="text-center mx-auto {{ $image->medical }}"></div>
+                                        <div class="col-10">Medical</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
                     @endforeach
                 @endif
                 </div>
