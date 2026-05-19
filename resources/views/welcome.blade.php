@@ -1,6 +1,12 @@
 <x-layout>
 
-    <h1 class="text-center pt-5">HOME PAGE</h1>
+     <div class="container-fluid">
+        <div class="row py-4">
+            <div class="col-12 justify-content-center align-items-center">
+              <x-hero />
+            </div>
+        </div>
+     </div>
     
     @if(session()->has('errorMessage'))
     <div class="container text-center">

@@ -158,3 +158,23 @@ overflow: hidden;
 text-overflow: ellipsis;
 }
  
+.hero-section h1 {
+    padding-top: 2rem;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+
+    background: linear-gradient(90deg, #111111, #b85410, #e3a36f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 15px 40px rgba(0,0,0,0.10);
+}
+
+.hero-section p {
+    font-size: 1.20rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+}
