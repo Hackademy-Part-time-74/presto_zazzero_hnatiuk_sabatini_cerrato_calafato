@@ -59,6 +59,13 @@ a {
     font-family: "Sora", serif;
 }
 
+/* Toglie ombre di default agli input e cambia i colori- Rob */
+.form-control:focus {
+
+    box-shadow: none;
+    border: 1px solid  #fd9603;
+}
+
 /* Colore testo  */
 .text-warning {
 
@@ -87,39 +94,67 @@ a {
     width: 120px;
 }
 
-
+/* Barra di navigazione presente in Zona Revisore- Rob */
 .page-link {
-
-    background-color:#f8f5f3 !important;
-
+    background-color:#ececec !important;
     color: #060606;
+    border: 1px solid lightgrey;
 }
 
+/* Quando fai hover- Rob */
+.page-link:hover {
+    color: #fd9603;
+    border: 1px solid lightgrey;
+}
+
+/* Quando lo clicchi- Rob */
+.page-link:focus{
+    border-color: #fd9603 !important;
+    box-shadow:  0 0 10px  #fd9603  ;
+}
+
+/* Elemento selezionato-attivo- Rob */
 .active > .page-link {
-
     background-color: #fd9603 !important;
-
     color: #060606;
-
-    border-color: #fd9603  !important;
-
+    border-color: #000000  !important;
 }
 
-    .card-w{
-        width:100%;
-        max-width:380px;
-        min-height:490px;
-    }
+/* Freccie Carosello -Rob*/
+.carousel-control-next-icon {
 
-    .img-card-custom{
-        height:300px;
-        object-fit:cover;
-    }
+    background-color: rgb(0, 0, 0);
+    border-radius: 30px;
+    
+}
+.carousel-control-prev-icon {
 
-    /* Taglia il testo in una riga con ... */
-    .text-overflow{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    }
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    
+}
+
+.carousel-indicator {
+
+    color: #fd9603 !important;
+}
+
+/* Dimensioni Card -Rob */
+.card-w{
+    width:100%;
+    max-width:380px;
+    min-height:490px;
+}
+
+.img-card-custom{
+    height:300px;
+    object-fit:cover;
+}
+
+/* Taglia il testo quando è troppo lungo e sostituisce con "..." */
+.text-overflow{
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+}
  

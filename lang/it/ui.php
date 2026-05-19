@@ -15,6 +15,7 @@ return
         'confirm' => 'Conferma', 
         'allArticles' => 'Tutti gli Articoli', 
         'articleDetails' => 'Dettagli articolo',
+        'language' => 'Lingua',
         'Abbigliamento' => 'Abbigliamento',
         'Accessori' => 'Accessori',
         'Animali Domestici' => 'Animali Domestici',

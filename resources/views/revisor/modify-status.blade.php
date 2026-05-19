@@ -23,7 +23,7 @@
 
         <div class="row justify-content-center">
             <div class="col-6">
-            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl(300, 300) : 'https://picsum.photos/300'}}"
+            <img src="{{ $article->images->isNotEmpty() ? $article->images->first()->getUrl() : 'https://picsum.photos/300'}}"
                 class="card-img-top" alt="immagine articolo {{ $article->title }}">
             </div>
 

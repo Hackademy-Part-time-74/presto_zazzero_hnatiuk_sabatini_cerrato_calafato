@@ -44,7 +44,7 @@
 
     <div class="dropdown">
         <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Language:  <i class=" ms-1 bi bi-globe-americas-fill"></i>
+            {{ __('ui.language') }}  <i class=" ms-1 bi bi-globe-americas-fill"></i>
         </button>
         <ul class="dropdown-menu text-center">
             <li><x-_locale lang="it"/></li>

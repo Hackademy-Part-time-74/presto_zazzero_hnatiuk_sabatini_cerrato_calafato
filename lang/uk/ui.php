@@ -15,6 +15,7 @@ return
         'confirm' => 'Confirm', 
         'allArticles' => 'Articles', 
         'articleDetails' => 'Details',
+        'language' => 'Language',
         'Abbigliamento' => 'Clothing',
         'Accessori' => 'Accessories',
         'Animali Domestici' => 'Pets',
