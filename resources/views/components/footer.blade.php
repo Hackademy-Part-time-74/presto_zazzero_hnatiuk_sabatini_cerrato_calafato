@@ -1,10 +1,10 @@
-<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+<footer class="d-flex bg-info flex-wrap justify-content-center align-items-center py-3 my-4 border-top">
     @auth
-        @if(!auth()->user()->is_revisor)
-        <div class="col-md-5 offset-md-1 mb-3 text-center">
-            <h5>Vuoi diventare revisore?</h5>
-            <p>Cliccando il bottone sottostante farai richiesta ai nostri admin</p>
-            <div class="d-flex flex-column align-items-center ">
+    @if(!auth()->user()->is_revisor)
+    <div class="col-md-6  mb-3 text-center">
+        <h5>Vuoi diventare revisore?</h5>
+        <p>Cliccando il bottone sottostante farai richiesta ai nostri admin</p>
+        <div class="d-flex flex-column align-items-center ">
 
             <div class="container-fluid justify-content-around">
                 <img src="{{ asset('images/carlo.jpeg') }}" alt="Il nostro Sofficino <3" height="48" width="48" class="rounded-5 mb-3">
@@ -15,21 +15,26 @@
             </div>
 
             <a href="{{ route('become.revisor') }}" class="btn btn-warning w-25">Diventa Revisore</a>
-            </div>
         </div>
-        @endif
+    </div>
+    @endif
     @endauth
-    <div class="col-md-4 d-flex align-items-center"> 
-        <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" aria-label="Bootstrap"> 
-            <svg class="bi" width="30" height="24" aria-hidden="true">
-                <use xlink:href="#bootstrap"></use>
-            </svg> </a> <span class="mb-3 mb-md-0 text-body-secondary">© 2025 Company, Inc</span> </div>
-    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-        <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Instagram"><svg class="bi" width="24" height="24" aria-hidden="true">
-                    <use xlink:href="#instagram"></use>
-                </svg></a></li>
-        <li class="ms-3"><a class="text-body-secondary" href="#" aria-label="Facebook"><svg class="bi" width="24" height="24">
-                    <use xlink:href="#facebook"></use>
-                </svg></a></li>
-    </ul>
+    <div class="p-4 d-flex justify-content-evenly align-items-center w-100">
+        <div class=" d-flex flex-column align-items-start text-body-secondary mt-3 ms-5">
+            <p>© 2025 Company, Inc</p>
+            <p>Contatti</p>
+            <p><i class="bi bi-telephone-fill"></i> : + 085 082 8193</p>
+            <p><i class="bi bi-envelope-fill"></i> : prestoit@gmail.com</p>
+        </div>
+
+        <div class="d-flex flex-column align-items-end text-body-secondary mt-3">
+            <p>Bootstrap</p>
+            <p>FAQ</p>
+            <p>Privacy Policy</p>
+            <p>Termini di servizio</p>
+        </div>
+
+
+    </div>
+
 </footer>

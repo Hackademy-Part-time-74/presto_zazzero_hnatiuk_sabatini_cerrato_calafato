@@ -135,11 +135,16 @@ a {
 }
 
 .carousel-indicator {
-
     color: #fd9603 !important;
 }
 
-/* Dimensioni Card -Rob */
+.carousel-item>img {
+    width:100%;
+    max-width:600px;
+    min-height:600px;
+}
+
+/* Dimensioni Card */
 .card-w{
     width:100%;
     max-width:380px;

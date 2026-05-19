@@ -29,14 +29,13 @@
                         <div class="col-12">
                             <div class="card mb-3">
                                 <div class="row">
-                                    <div class="col-md-6  d-flex justify-content-center align-items-center">
-                                        <img 
-                                src="{{ $image->getUrl(300, 300) }}"
-                                alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
-                                class="img-fluid rounded shadow">
+                                    <div class="col-md-12  d-flex justify-content-center align-items-center">
+                                        <img src="{{ $image->getUrl(600, 600) }}"
+                                             alt="Immagine {{ $key + 1 }} dell'articolo {{ $article_to_check->title }}"
+                                             class="img-fluid rounded shadow">
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-12 col-lg-6">
                                         <div class="card-body">
                                             <h5>Labels</h5>
                                             @if ($image->labels)
@@ -49,7 +48,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-12 col-lg-6">
                                         <div class="card-body">
                                             <h5>Google Vision Ratings</h5>
                                             <div class="row justify-content-center">
@@ -96,7 +95,7 @@
                 @endif
                 </div>
             </div>
-            <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
+            <div class="col-md-6 h-25 ps-4 d-flex flex-column justify-content-between">
                 <div>
                     <h2>{{ $article_to_check->title }}</h2>
                     <h3>Autore: {{ $article_to_check->user->name }} </h3>

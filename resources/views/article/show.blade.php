@@ -15,7 +15,7 @@
                         @foreach($article->images as $key => $image)
                         <div class="carousel-item @if($loop->first) active @endif">
 
-                            <img src="{{  $image->getUrl() }}" class="d-block w-100 rounded shadow" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
+                            <img src="{{  $image->getUrl(600,600) }}" class=" w-100  rounded shadow" alt="Immagine {{ $key + 1 }} dell'articolo {{ $article->title }}">
 
                         </div>
                         @endforeach
@@ -36,12 +36,12 @@
              <img src="https://picsum.photos/400" alt="Nessuna foto inserita dall'utente">
              @endif
             </div>
-            <div class="col-12 col-md-6 mb-3 height-custom text-center shadow-lg p-5 rounded border border-2 border-warning">
+            <div class="col-12 col-md-12 col-lg-6 mb-3  text-center shadow-lg p-5 rounded border border-2 border-warning">
 
                 <span class="display-6 fw-semibold">Descrizione </span>
-                <h2 class="fw-light">{{ $article->description }}</h2>
+                <h2 class="fw-light fs-6">{{ $article->description }}</h2>
 
-                <div class="d-flex flex-column justify-content-end align-items-center h-75">
+                <div class="d-flex flex-column justify-content-end align-items-center h-25">
                     <h4 class="fw-bold mb-4">Prezzo: {{ $article->price }} €</h4>
                 </div>
             </div>
